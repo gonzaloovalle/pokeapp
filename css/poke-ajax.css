@@ -1,0 +1,14 @@
+#pokemonContainer {
+    height: 300px;
+    width: 300px;
+    margin: auto;
+    display: flex;
+    border: solid black;
+}
+
+.pokemon {
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    align-items: center;
+}
