@@ -32,7 +32,7 @@ $(function() {
 
     $("#search").on('click', function(e) {
         e.preventDefault()
-        userInput = $('#pokeSearch').val();
+        userInput = $('#pokeSearch').val().toLowerCase();
         updatePage()
     });
 
