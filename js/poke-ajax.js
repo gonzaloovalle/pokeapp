@@ -11,11 +11,11 @@ $(function() {
     function buildHTML(pokemon) {
         let pokemonImage = pokemon.sprites.front_default;
         let pokeType = ''
-        pokemon.types.forEach(function(type) {
-            if (pokemon.types.length === 1) {
-                return pokeType += type.type.name;
-            } else if (pokemon.types.length === 2) {
-                return pokeType += type.type.name;
+        pokemon.types.forEach(function(type, index) {
+            if (index === 0) {
+                pokeType += type.type.name;
+            } else if (index === 1) {
+                pokeType += '/' + type.type.name;
             }
         });
         let pokeHTML =
