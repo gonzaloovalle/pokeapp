@@ -1,10 +1,14 @@
 $(function() {
     let userInput = '';
-    function updatePage() {
-        $.ajax(`https://pokeapi.co/api/v2/pokemon/${userInput}`).done(function(data) {
+    async function updatePage() {
+        try {
+            const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${userInput}`);
+            const data = await response.json();
             console.log(data);
             buildHTML(data)
-        });
+        } catch (error) {
+            console.log(error);
+        }
     }
 
 
