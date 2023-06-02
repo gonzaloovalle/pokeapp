@@ -24,7 +24,7 @@ $(function() {
         });
         let pokeHTML =
             `<div class="pokemon">
-                <img src="${pokemonImage}">
+                <img src="${pokemonImage}" alt="pokemon sprite">
                 <h2 id="name">${pokemon.species.name.toUpperCase()}</h2>
                 <h3>Type: ${pokeType}</h3>
             </div>`
@@ -37,7 +37,7 @@ $(function() {
     $("#search").on('click', function(e) {
         e.preventDefault()
         userInput = $('#pokeSearch').val().toLowerCase();
-        updatePage()
+        updatePage().then(r => {})
     });
 
 });
