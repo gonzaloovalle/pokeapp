@@ -1,3 +1,3 @@
 # pokeapp
 
-# Go here: https://gonzaloovalle.github.io/coffee-project-training/ to view the live site!
+# Go here: https://gonzaloovalle.github.io/pokeapp/ to view the live site!
