@@ -26,11 +26,17 @@ $(function() {
         });
         let pokeHTML =
             `<div class="pokemon">
+                <img src="${pokemonImage}" alt="pokemon sprite" id="pokeImage">
                 <h2>#: ${pokeId}</h2>
-                <img src="${pokemonImage}" alt="pokemon sprite">
                 <h2 id="name">${pokeName}</h2>
                 <h3>Type: ${pokeType}</h3>
-                
+                <h3>Base Stats: </h3>
+                <h4>Health Points: ${pokemon.stats[0].base_stat} </h4>
+                <h4>Attack: ${pokemon.stats[1].base_stat} </h4>
+                <h4>Defense: ${pokemon.stats[2].base_stat} </h4>
+                <h4>Special Attack: ${pokemon.stats[3].base_stat} </h4>
+                <h4>Special Defense: ${pokemon.stats[4].base_stat} </h4>
+                <h4>Speed: ${pokemon.stats[5].base_stat} </h4>
             </div>`
 
         $('#pokemonContainer').html(pokeHTML);
